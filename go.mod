@@ -1,2 +1,2 @@
-module github.com/iam-veeramalla/go-web-app
+module github.com/AishwaryGathe/ShikshaSetu
 go 1.22.5
