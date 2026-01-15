@@ -11,7 +11,7 @@ import (
 func TestMain(t *testing.T) {
 	req, err := http.NewRequest("GET", "/home", nil)
 	if err != nil {
-		t.Fatal(err)
+		t.Fatal(er)
 	}
 
 	rr := httptest.NewRecorder()
