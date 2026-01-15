@@ -18,4 +18,4 @@ spec:
         - name: go-web-app
           image: aishwarygathe/go-web-app:v1
           ports:
-            - containerport: 8080
+            - containerPort: 8080
