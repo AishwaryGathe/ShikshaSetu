@@ -3,7 +3,7 @@ replicaCount: 2
 image:
   repository: aishwarygathe/go-web-app
   pullPolicy: IfNotPresent
-  tag: "21045416797"
+  tag: "21045957718"
 
 ingress:
   enabled: false
