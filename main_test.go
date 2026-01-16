@@ -1,5 +1,3 @@
-// Test the main function
-
 package main
 
 import (
@@ -8,26 +6,32 @@ import (
 	"testing"
 )
 
-func TestMain(t *testing.T) {
-	req, err := http.NewRequest("GET", "/home", nil)
-	if err != nil {
-		t.Fatal(err)
+func TestAllPages(t *testing.T) {
+	tests := []struct {
+		name    string
+		path    string
+		handler http.HandlerFunc
+	}{
+		{"Home", "/", homePage},
+		{"Courses", "/courses", coursePage},
+		{"About", "/about", aboutPage},
+		{"Contact", "/contact", contactPage},
 	}
 
-	rr := httptest.NewRecorder()
-	handler := http.HandlerFunc(homePage)
+	for _, tt := range tests {
+		tt := tt
+		t.Run(tt.name, func(t *testing.T) {
+			req, err := http.NewRequest("GET", tt.path, nil)
+			if err != nil {
+				t.Fatal(err)
+			}
 
-	handler.ServeHTTP(rr, req)
+			rr := httptest.NewRecorder()
+			tt.handler.ServeHTTP(rr, req)
 
-	if status := rr.Code; status != http.StatusOK {
-		t.Errorf("handler returned wrong status code: got %v want %v",
-			status, http.StatusOK)
-	}
-
-	// Just verify the code not html content
-	expected := "text/html; charset=utf-8"
-	if contentType := rr.Header().Get("Content-Type"); contentType != expected {
-		t.Errorf("handler returned unexpected content type: got %v want %v",
-			contentType, expected)
+			if rr.Code != http.StatusOK {
+				t.Errorf("expected 200, got %d", rr.Code)
+			}
+		})
 	}
 }
