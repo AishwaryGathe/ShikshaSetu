@@ -22,6 +22,7 @@ func contactPage(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	// editing to actions
 
 	// Home page MUST be root
 	http.HandleFunc("/", homePage)
