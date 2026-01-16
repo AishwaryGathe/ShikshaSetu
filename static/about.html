@@ -1,90 +1,165 @@
-<Docktype html>
-<html>
-    <head>
-        <title>About</title>
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-            }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | ShikshaSetu</title>
 
-            header {
-                background-color: #333;
-                color: #fff;
-                padding: 10px 0;
-                text-align: center;
-            }
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+    }
 
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
+    header {
+      background-color: #0f172a;
+      padding: 15px 40px;
+    }
 
-            nav ul li {
-                display: inline;
-                margin-right: 10px;
-            }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-            nav ul li a {
-                color: #fff;
-                text-decoration: none;
-            }
+    nav h1 {
+      color: #38bdf8;
+      margin: 0;
+    }
 
-            main {
-                padding: 20px;
-            }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
 
-            section {
-                margin-bottom: 20px;
-            }
+    nav ul li a {
+      text-decoration: none;
+      color: #e5e7eb;
+      font-weight: 500;
+    }
 
-            footer {
-                background-color: #333;
-                color: #fff;
-                text-align: center;
-                padding: 10px 0;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="home">Home</a></li>
-                    <li><a href="about">About</a></li>
-                    <li><a href="contact">Contact</a></li>
-                    <li><a href="courses">Courses</a></li>
-                </ul>
-            </nav>
-        </header>
+    nav ul li a:hover {
+      color: #38bdf8;
+    }
 
-        <main>
-            <section>
-                <h1>About the Author</h1>
-                <p>Hi Everyone, My name is Abhishek and welcome to my channel :)</p>
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 80px 40px;
+    }
 
-                    <p>    I am an opensource enthusiast and a great believer in sharing knowledge. </p>
-                        <p>  I have my footprints in popular opensource projects like Argo CD, Argo CD Operator, Argo Rollouts Manager, GitOps Operator, F5 Ingress Controller, Nginx Ingress Controller by Nginx and others. </p>
-                    
-                            <p> Apart from working with Red Hat as a GitOps product lead, I also hold below positions in OpenSource communities</p>
-                                <p>  - Maintainer of Argo CD Operator</p>
-                                    <p> - Creator of Argo Rollouts Manager</p>
-                                        <p> - Maintainer of RedHat Developer (GitOps operator)</p>
-                                            <p> - Member of Argo Project</p>
-                                                <p> - Member of Argo SIG Security</p>
-                    
-                                                    <p> If you want to learn complete devops for free with practical projects, checkout the playlist</p>
-                                                        <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvIKMhk8WhzN1pYoJ1YU8Csa"> Playlists</a></p>
-                    
-                                                            <p> Please subscribe to the channel to keep learning and growing together. Thanks :)</p>
-            </section>
-        </main>
+    .about-card {
+      background-color: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    }
 
-        <footer>
-            <p>&copy; Abhishek.Veeramalla</p>
-        </footer>
-    </body>
+    .about-card h2 {
+      margin-top: 0;
+      font-size: 34px;
+      color: #0f172a;
+    }
+
+    .about-card p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #475569;
+    }
+
+    .about-card ul {
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+
+    .about-card ul li {
+      margin-bottom: 8px;
+      color: #334155;
+    }
+
+    .about-card a {
+      color: #0284c7;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .about-card a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #020617;
+      color: #94a3b8;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <h1>ShikshaSetu</h1>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/courses">Courses</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <div class="about-card">
+    <h2>About the Author</h2>
+
+    <p>
+      Hi everyone, my name is Aishwary, and welcome to the ShikshaSetu learning platform 🙂
+      I’m a strong believer in open-source, community learning, and sharing real-world knowledge.
+    </p>
+
+    <p>
+      I have contributed to and maintained several popular open-source and GitOps-related projects,
+      working deeply in Kubernetes, DevOps, and cloud-native ecosystems.
+    </p>
+
+    <p><strong>Open Source & Community Roles:</strong></p>
+    <ul>
+      <li>Maintainer – Argo CD Operator</li>
+      <li>Creator – Argo Rollouts Manager</li>
+      <li>Maintainer – Red Hat Developer (GitOps Operator)</li>
+      <li>Member – Argo Project</li>
+      <li>Member – Argo SIG Security</li>
+    </ul>
+
+    <p>
+      Alongside working at Red Hat as a GitOps Product Lead,
+      I focus on helping learners master DevOps from scratch through free,
+      practical, and real-world content.
+    </p>
+
+    <p>
+      👉 <a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvIKMhk8WhzN1pYoJ1YU8Csa" target="_blank">
+        Explore the complete DevOps Zero to Hero playlist
+      </a>
+    </p>
+
+    <p>
+      Please consider subscribing to the channel and growing together.
+      Happy learning 🚀
+    </p>
+  </div>
+</main>
+
+<footer>
+  <p>© 2026 ShikshaSetu | Built by Aishwary Gathe</p>
+</footer>
+
+</body>
 </html>

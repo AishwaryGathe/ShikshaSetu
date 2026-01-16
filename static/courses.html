@@ -1,92 +1,231 @@
-<DocType html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses | ShikshaSetu</title>
 
-<html>
-    <head>
-        <title>Learn DevOps from Basics</title>
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-            }
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, sans-serif;
+        background-color: #f8fafc;
+        color: #1e293b;
+      }
 
-            header {
-                background-color: #333;
-                color: #fff;
-                padding: 10px 0;
-                text-align: center;
-            }
+      header {
+        background-color: #0f172a;
+        padding: 15px 40px;
+      }
 
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-            nav ul li {
-                display: inline;
-                margin-right: 10px;
-            }
+      nav h1 {
+        color: #38bdf8;
+        margin: 0;
+      }
 
-            nav ul li a {
-                color: #fff;
-                text-decoration: none;
-            }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+      }
 
-            main {
-                padding: 20px;
-            }
+      nav ul li a {
+        text-decoration: none;
+        color: #e5e7eb;
+        font-weight: 500;
+      }
 
-            section {
-                margin-bottom: 20px;
-            }
+      nav ul li a:hover {
+        color: #38bdf8;
+      }
 
-            footer {
-                background-color: #333;
-                color: #fff;
-                text-align: center;
-                padding: 10px 0;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="home">Home</a></li>
-                    <li><a href="about">About</a></li>
-                    <li><a href="contact">Contact</a></li>
-                    <li><a href="courses">Courses</a></li>
-                </ul>
-            </nav>
-        </header>
+      main {
+        padding: 60px 40px;
+        max-width: 1200px;
+        margin: auto;
+      }
 
-        <main>
-            <section>
-                <h1>Learn DevOps from Basics</h1>
-                <p>DevOps is a set of practices that combines software development (Dev) and IT operations (Ops)</p>
-                <p>It aims to shorten the systems development life cycle and provide continuous delivery with high software quality. DevOps is complementary with Agile software development; several DevOps aspects came from Agile methodology</p>    
+      h2 {
+        margin-bottom: 10px;
+        color: #0f172a;
+      }
 
-                <h2>Main Tutorials</h2>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvIKMhk8WhzN1pYoJ1YU8Csa">DevOps Zero to Hero</a></p>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvLNOxX0RfndiYSt1Le9azze">AWS Zero to Hero</a></p>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvIcxgCUyBHVOcWs0Krjx9xR">Azure Zero to Hero</a></p>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvI0O4PeKVV1-yJoX2AqIWuf">Terraform Zero to Hero</a></p>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvKwTyYNJCUwGPvql0TrsPgv">Python Zero to Hero</a></p>
+      .section-desc {
+        color: #475569;
+        margin-bottom: 30px;
+      }
 
-                <h2>Additional Tutorials</h2>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvKv4MFW35XRskZbQbrt6ep-">Networking Fundamentals</a></p>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvLxd5nmtmORCmhD5jkrNbuE">Ansible Zero to Hero</a></p>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvKu7OZpgj1-MzJFqZ8RBp6f">GitOps Zero to Hero</a></p>
+      .course-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px;
+        margin-bottom: 50px;
+      }
 
-                <h2>Troubleshooting Tutorials</h2>
-                <p><a href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvIrFBI1farpLS_OSUBXJMLX">Troubleshooting Kubernetes</a></p>
-            </section>
-        </main>
+      .course-card {
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+      }
 
-        <footer>
-            <p>&copy; Abhishek.Veeramalla</p>
-        </footer>
-    </body>
+      .course-card h3 {
+        margin-top: 0;
+        color: #020617;
+      }
+
+      .course-card a {
+        display: inline-block;
+        margin-top: 10px;
+        color: #0284c7;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      .course-card a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #020617;
+        color: #94a3b8;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <h1>ShikshaSetu</h1>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/courses">Courses</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Main Tutorials</h2>
+        <p class="section-desc">
+          Start your DevOps and Cloud journey from zero.
+        </p>
+
+        <div class="course-grid">
+          <div class="course-card">
+            <h3>DevOps Zero to Hero</h3>
+            <a
+              href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvIKMhk8WhzN1pYoJ1YU8Csa"
+              target="_blank"
+              >Watch Playlist →</a
+            >
+          </div>
+
+          <div class="course-card">
+            <h3>AWS Zero to Hero</h3>
+            <a
+              href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvLNOxX0RfndiYSt1Le9azze"
+              target="_blank"
+              >Watch Playlist →</a
+            >
+          </div>
+
+          <div class="course-card">
+            <h3>Azure Zero to Hero</h3>
+            <a
+              href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvIcxgCUyBHVOcWs0Krjx9xR"
+              target="_blank"
+              >Watch Playlist →</a
+            >
+          </div>
+
+          <div class="course-card">
+            <h3>Terraform Zero to Hero</h3>
+            <a
+              href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvI0O4PeKVV1-yJoX2AqIWuf"
+              target="_blank"
+              >Watch Playlist →</a
+            >
+          </div>
+
+          <div class="course-card">
+            <h3>Python Zero to Hero</h3>
+            <a
+              href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvKwTyYNJCUwGPvql0TrsPgv"
+              target="_blank"
+              >Watch Playlist →</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Additional Tutorials</h2>
+        <p class="section-desc">
+          Strengthen your foundations and GitOps skills.
+        </p>
+
+        <div class="course-grid">
+          <div class="course-card">
+            <h3>Networking Fundamentals</h3>
+            <a
+              href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvKv4MFW35XRskZbQbrt6ep-"
+              target="_blank"
+              >Watch Playlist →</a
+            >
+          </div>
+
+          <div class="course-card">
+            <h3>Ansible Zero to Hero</h3>
+            <a
+              href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvLxd5nmtmORCmhD5jkrNbuE"
+              target="_blank"
+              >Watch Playlist →</a
+            >
+          </div>
+
+          <div class="course-card">
+            <h3>GitOps Zero to Hero</h3>
+            <a
+              href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvKu7OZpgj1-MzJFqZ8RBp6f"
+              target="_blank"
+              >Watch Playlist →</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Troubleshooting</h2>
+        <p class="section-desc">Learn how to debug real production issues.</p>
+
+        <div class="course-grid">
+          <div class="course-card">
+            <h3>Kubernetes Troubleshooting</h3>
+            <a
+              href="https://www.youtube.com/playlist?list=PLdpzxOOAlwvIrFBI1farpLS_OSUBXJMLX"
+              target="_blank"
+              >Watch Playlist →</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 ShikshaSetu | Built by Aishwary Gathe</p>
+    </footer>
+  </body>
 </html>

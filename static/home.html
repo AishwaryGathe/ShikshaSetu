@@ -1,91 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShikshaSetu | Learn DevOps</title>
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+      body {
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9fafb;
+        color: #333;
+      }
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
+      header {
+        background-color: #0f172a;
+        padding: 15px 40px;
+      }
 
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
 
-        nav ul li {
-            display: inline;
-            margin-right: 10px;
-        }
+      nav h1 {
+        color: #38bdf8;
+        margin: 0;
+      }
 
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
+      nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        margin: 0;
+        padding: 0;
+      }
 
-        main {
-            padding: 20px;
-        }
+      nav ul li a {
+        text-decoration: none;
+        color: #e5e7eb;
+        font-weight: 500;
+      }
 
-        section {
-            margin-bottom: 20px;
-        }
+      nav ul li a:hover {
+        color: #38bdf8;
+      }
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>    
-</head>
-<body>
+      .hero {
+        text-align: center;
+        padding: 80px 20px;
+        background: linear-gradient(135deg, #0f172a, #020617);
+        color: white;
+      }
+
+      .hero h2 {
+        font-size: 42px;
+        margin-bottom: 20px;
+      }
+
+      .hero p {
+        font-size: 18px;
+        max-width: 700px;
+        margin: auto;
+        line-height: 1.6;
+        color: #cbd5f5;
+      }
+
+      .hero a {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 12px 28px;
+        background-color: #38bdf8;
+        color: #020617;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 6px;
+      }
+
+      .hero a:hover {
+        background-color: #0ea5e9;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 60px 40px;
+        background-color: #ffffff;
+      }
+
+      .feature-box {
+        padding: 25px;
+        border-radius: 8px;
+        background-color: #f1f5f9;
+        text-align: center;
+      }
+
+      .feature-box h3 {
+        margin-bottom: 10px;
+        color: #0f172a;
+      }
+
+      footer {
+        text-align: center;
+        padding: 15px;
+        background-color: #020617;
+        color: #94a3b8;
+      }
+    </style>
+  </head>
+
+  <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="home">Home</a></li>
-                <li><a href="about">About</a></li>
-                <li><a href="contact">Contact</a></li>
-                <li><a href="courses">Courses</a></li>
-            </ul>
-        </nav>
+      <nav>
+        <h1>ShikshaSetu</h1>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/courses">Courses</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <main>
-        <section>
-            <h1>Learn DevOps from Basics With Aishwary</h1>
-            <p>The main purpose of this website is to guide people on how to learn DevOps 
-                from basics for Free. We will provide you with the best resources to learn.
-            </p>
-        </section>
+    <section class="hero">
+      <h2>Learn DevOps from Zero to Hero 🚀</h2>
+      <p>
+        ShikshaSetu helps you master DevOps fundamentals, cloud platforms, and
+        real-world tools like AWS, Docker, Kubernetes, Helm, and GitOps — all
+        for free.
+      </p>
+      <a href="/courses">Explore Courses</a>
+    </section>
 
-        <section>
-            <h2>Overview</h2>
-            <p> Zero to Hero courses on all DevOps tools and popular Cloud(AWS and Azure) platform</p>
-        </section>
-
-        <section>
-            <h2>Courses Offered</h2>
-            <p>Please look at the <a href="courses">courses</a> section.</p>  
-        </section>
-    </main>
+    <section class="features">
+      <div class="feature-box">
+        <h3>Beginner Friendly</h3>
+        <p>Start from basics even if you have no DevOps background.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Cloud & Kubernetes</h3>
+        <p>
+          Learn AWS, Docker, Kubernetes, Helm, and Argo CD with real examples.
+        </p>
+      </div>
+      <div class="feature-box">
+        <h3>Real DevOps Projects</h3>
+        <p>Hands-on projects deployed on AWS EKS using GitOps practices.</p>
+      </div>
+    </section>
 
     <footer>
-        <p>&copy; Abhishek.Veeramalla</p>
+      <p>© 2026 ShikshaSetu | Built by Aishwary Gathe</p>
     </footer>
-</body>
+  </body>
 </html>
